@@ -64,7 +64,7 @@ function checkGameStatus() {
             return;
         }
         if (options[condition[0]] == options[condition[1]] && options[condition[1]] == options[condition[2]]) {
-            statusDisplay.innerText = currentPlayer + " wins!"
+            statusDisplay.innerText = options[condition[0]] + " wins!"
             gameRunning = false;
         }
     })
