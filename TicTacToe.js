@@ -35,9 +35,9 @@ function cellClicked() {
     this.style.color = 'black';
     this.innerText = currentPlayer;
     options[this.attributes.cellindex.value] = currentPlayer;
-    checkGameStatus()
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusDisplay.innerText = `${currentPlayer}'s turn`
+    checkGameStatus()
 }
 
 function cellMouseOver() {
