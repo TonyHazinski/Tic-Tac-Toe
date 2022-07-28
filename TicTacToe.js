@@ -65,6 +65,7 @@ function checkGameStatus() {
         }
         if (options[condition[0]] == options[condition[1]] && options[condition[1]] == options[condition[2]]) {
             statusDisplay.innerText = options[condition[0]] + " wins!"
+            highlightWin(condition);
             gameRunning = false;
         }
     })
@@ -74,10 +75,17 @@ function checkGameStatus() {
     }
 }
 
+function highlightWin(condition) {
+    document.querySelector('div[cellindex="' + condition[0] + '"').style.backgroundColor = "lightgreen"
+    document.querySelector('div[cellindex="' + condition[1] + '"').style.backgroundColor = "lightgreen"
+    document.querySelector('div[cellindex="' + condition[2] + '"').style.backgroundColor = "lightgreen"
+}
+
 function restart() {
     cells.forEach(cell => {
         cell.innerText = "";
         cell.style.color = "lightgray";
+        cell.style.backgroundColor = "white";
     })
     for (let i = 0; i < 9; i++) {
         options[i] = "";
