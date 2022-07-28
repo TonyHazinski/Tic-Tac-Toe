@@ -23,6 +23,7 @@ function intitialzeGame() {
         cell.onmouseleave = cellMouseLeave;
     });
     gameRunning = true;
+    statusDisplay.innerText = `${currentPlayer}'s turn`
 
 }
 
@@ -35,7 +36,8 @@ function cellClicked() {
     this.innerText = currentPlayer;
     options[this.attributes.cellindex.value] = currentPlayer;
     checkGameStatus()
-    currentPlayer = currentPlayer == "X" ? "O" : "X";
+    currentPlayer = (currentPlayer == "X") ? "O" : "X";
+    statusDisplay.innerText = `${currentPlayer}'s turn`
 }
 
 function cellMouseOver() {
@@ -67,7 +69,7 @@ function checkGameStatus() {
         }
     })
     if (turns == 9 && gameRunning) {
-        statusDisplay.innerText = "It's a tie!"
+        statusDisplay.innerText = "Draw!"
         gameRunning = false;
     }
 }
