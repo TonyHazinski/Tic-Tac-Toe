@@ -67,7 +67,7 @@ function checkGameStatus() {
         }
     })
     if (turns == 9 && gameRunning) {
-        statusDisplay.innerText = "Its a tie!"
+        statusDisplay.innerText = "It's a tie!"
         gameRunning = false;
     }
 }
