@@ -1,0 +1,25 @@
+#game_container {
+    text-align: center;
+    font-family: "Chalkboard";
+}
+
+#board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 231px;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: center;
+    line-height: 75px;
+    cursor: pointer;
+    color: lightgray;
+}
+
+
